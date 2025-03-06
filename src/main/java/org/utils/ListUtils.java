@@ -1,16 +1,17 @@
 package org.utils;
 
-import java.io.*;
 import java.util.*;
 
-import org.exercici1.Month;
-import org.utils.Print;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 public class ListUtils {
+
+    public static <T> void readGenericList(List<T> list){
+        for(T item :list){
+            Print.printConsole(item.toString());
+        }
+    }
 
     public static void readIntList(List<Integer> integers){
         for(Integer intItem :integers){
