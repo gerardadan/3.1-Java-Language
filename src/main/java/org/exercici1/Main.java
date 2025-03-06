@@ -1,5 +1,7 @@
 package org.exercici1;
 
+import org.utils.ListUtils;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
@@ -15,7 +17,8 @@ public class Main {
         for(Month month :monthsAl){
             months.add(month);
         }
-        readMonthHasSet(months);
+        System.out.println("**Month HashSet**");
+        Month.readMonthHasSet(months);
 
         return months;
     }
@@ -34,7 +37,9 @@ public class Main {
             months.add(new Month("October"));
             months.add(new Month("November"));
             months.add(new Month("December"));
-            readMonthHasSet(months);
+
+            System.out.println("**Month ArrayList**");
+            Month.readMonthHasSet(months);
 
             return months;
     }
@@ -52,31 +57,18 @@ public class Main {
         months.add(new Month("October"));
         months.add(new Month("November"));
         months.add(new Month("December"));
-        readMonthArrayList(months);
+        Month.readMonthArrayList(months);
 
         months.add(new Month("August"));
-        readMonthArrayList(months);
+        Month.readMonthArrayList(months);
         months.removeLast();
 
         months.add(7,new Month("August"));
-        readMonthArrayList(months);
+        System.out.println("**Month ArrayList**");
+        Month.readMonthArrayList(months);
 
         return months;
     }
 
-    public static void readMonthArrayList(ArrayList<Month> months){
-        System.out.println("**Month ArrayList**");
-        for(Month month :months){
-            System.out.println(month.getName());
-        }
-        System.out.println();
-    }
 
-    public static void readMonthHasSet(HashSet<Month> months){
-        System.out.println("**Month HashSet**");
-        for(Month month :months){
-            System.out.println(month.getName());
-        }
-        System.out.println();
-    }
 }
