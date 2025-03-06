@@ -29,7 +29,7 @@ public class Main {
             months.add(new Month("May"));
             months.add(new Month("June"));
             months.add(new Month("July"));
-            months.add(new Month("Agust"));
+            months.add(new Month("August"));
             months.add(new Month("September"));
             months.add(new Month("October"));
             months.add(new Month("November"));
@@ -54,11 +54,11 @@ public class Main {
         months.add(new Month("December"));
         readMonthArrayList(months);
 
-        months.add(new Month("Agust"));
+        months.add(new Month("August"));
         readMonthArrayList(months);
         months.removeLast();
 
-        months.add(7,new Month("Agust"));
+        months.add(7,new Month("August"));
         readMonthArrayList(months);
 
         return months;
