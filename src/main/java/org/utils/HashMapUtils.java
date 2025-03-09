@@ -3,35 +3,34 @@ package org.utils;
 import java.util.*;
 
 public class HashMapUtils {
-    public static HashMap<String, String> randomMix(){
-        HashMap<String, String> hashMap = new HashMap<String, String>();
 
-        return hashMap;
+    public static <T> Object randomKeyValuePair(HashMap<T, T> hashMap) throws Exception{
+        Random randomNum = new Random();
+        Object[] arrayHashMap = hashMap.entrySet().toArray();
+
+        return arrayHashMap[randomNum.nextInt(arrayHashMap.length)];
     }
 
-    public static HashMap<String, String> getRandomEntries(int number, HashMap<String, String> hashMap){
-        HashMap<String, String> hashMapResult = new HashMap<String, String>();
-        for(int i=0; i<=number;i++){
-            Random randomNum = new Random(hashMap.size()-1);
-            hashMap.get(i);
-            //hashMapResult.put(hashMap.get(i));
-        }
+    public static <T> Object getValueByIndex(HashMap<String, String> hashMap, int index) throws Exception{
+        List keys = new ArrayList(hashMap.keySet());
 
-        return hashMap;
+        return keys.get(index);
     }
 
-    public static HashMap<String, String> arrayListToHashMap (ArrayList<String> list) {
+    public static HashMap<String, String> arrayListToHashMap (ArrayList<String> list) throws Exception{
         HashMap<String, String> hashMap = new HashMap<String, String>();
-        try{
-            for(String item :list){
+        for(String item :list){
+            if(!item.isEmpty()){
                 Map.Entry<String, String> stringPair = StringUtils.stringToPair(item);
                 hashMap.put(stringPair.getKey(), stringPair.getValue());
             }
-        }catch (Exception e){
-
         }
 
         return hashMap;
+    }
+
+    public void checkMapEntryIsEmpty(){
+
     }
 
 }

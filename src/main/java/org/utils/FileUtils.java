@@ -1,6 +1,8 @@
 package org.utils;
 
 import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,6 +27,23 @@ public class FileUtils {
         }
 
         return lineas;
+    }
+
+    public static void writeFileToResources(String fileName, ArrayList<String> lista){
+        try {
+            File file = new File(FileUtils.class.getClassLoader().getResource(fileName).toURI());
+            OutputStream outStream = new FileOutputStream(file);
+            for (String s : lista) {
+                outStream.write(s.getBytes());
+                outStream.write('\n');
+            }
+
+            outStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static ArrayList<String> readFileFromPath(String fileName, String path) {
