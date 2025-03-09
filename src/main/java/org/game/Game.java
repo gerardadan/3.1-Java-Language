@@ -1,7 +1,8 @@
-package org.utils;
+package org.game;
+
+import org.utils.Print;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Game {

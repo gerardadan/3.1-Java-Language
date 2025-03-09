@@ -1,11 +1,15 @@
-package org.utils;
+package org.game;
+
+import org.utils.FileUtils;
+import org.utils.HashMapUtils;
+import org.utils.Print;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class QuizGame extends Game{
+public class QuizGame extends Game {
     private final int numMaxQuiz = 10;
     private final HashMap<String, String> hashMap;
     private Scanner scanner = new Scanner(System.in);

@@ -1,11 +1,9 @@
 package org.exercisi3;
+import org.game.QuizGame;
 import org.utils.*;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 public class Main {
     public static void main(String[] args) {
