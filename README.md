@@ -1,62 +1,66 @@
-# 📄 Descripció - Enunciat de l'exercici
+#  Description - Exercise Statement
 
-## Nivell 1 - Exercici 1: Manipulació d'ArrayList i HashSet
+## Level 1 - Exercise 1: ArrayList and HashSet Manipulation
 
-En aquest exercici, es crea una classe anomenada **Month** amb un atribut "name" per emmagatzemar el nom del mes de l'any.
+In this exercise, a class named **Month** is created with a "name" attribute to store the name of the month of the year.
 
-1. Es creen **11 objectes Month** i s'afegeixen a un **ArrayList**, excepte "Agost".
-2. Es realitza la inserció de "Agost" en la posició correcta per mantenir l'ordre dels mesos.
-3. Es converteix l'**ArrayList** en un **HashSet** per assegurar-se que no permet duplicats.
-4. Es recorre la llista utilitzant **un bucle for** i **un iterador**.
-
----
-
-## Nivell 1 - Exercici 2: Llistes i ListIterator
-
-1. Es crea i emplena un **List<Integer>** amb diversos valors.
-2. Es crea un segon **List<Integer>** on s'insereixen els elements de la primera llista en **ordre invers**.
-3. Es fa ús d'**objectes ListIterator** per llegir els elements de la primera llista i inserir-los a la segona.
-
----
-## Nivell 1 - Exercici 3: Quiz de Capitals
-
-**Objectiu**
-- Desenvolupar un programa en Java que llegeixi un fitxer de text countries.txt, on cada línia conté el nom d’un país i la seva capital separats per una coma. El programa guardarà aquestes dades en un HashMap<String, String> i realitzarà un joc de preguntes per a l'usuari.
-
-**Funcionament**
-- Llegir el fitxer countries.txt i emmagatzemar els països i capitals en un HashMap<String, String>.
-Demanar el nom de l'usuari/ària.
-- Mostrar 10 països de forma aleatòria i demanar a l'usuari que escrigui la seva capital.
-Si l'usuari encerta, suma 1 punt.
-- Al final del joc, desar el nom de l’usuari i la seva puntuació en el fitxer classificacio.txt.
-
-**Requisits**
-- Utilitzar un HashMap<String, String> per emmagatzemar les dades.
-- Llegir i escriure fitxers amb FileReader i FileWriter o equivalents.
-- Fer servir una estructura repetitiva per gestionar les 10 preguntes.
-- Usar un Random per seleccionar els països de manera aleatòria.
-  
----
-
-# 💻 Tecnologies Utilitzades
-
-- **Java**
-- **Col·leccions en Java (ArrayList, HashSet, ListIterator)**
-- **Iteradors en Java**
+1.  **11 Month objects** are created and added to an **ArrayList**, except for "August".
+2.  The insertion of "August" is performed in the correct position to maintain the order of the months.
+3.  The **ArrayList** is converted into a **HashSet** to ensure that it does not allow duplicates.
+4.  The list is traversed using **a for loop** and **an iterator**.
 
 ---
 
-# 📋 Requisits
+## Level 1 - Exercise 2: Lists and ListIterator
 
-Per a executar aquest projecte, es requereix:
+1.  A **List<Integer>** is created and filled with various values.
+2.  A second **List<Integer>** is created where the elements of the first list are inserted in **reverse order**.
+3.  **ListIterator objects** are used to read the elements of the first list and insert them into the second.
 
-- **JDK 8 o superior**
-- Un entorn de desenvolupament com **IntelliJ IDEA, Eclipse o VS Code** amb extensió per a Java
-- Coneixements bàsics de **Java** i **col·leccions**
+---
 
-### Per compilar i executar el programa des de terminal:
+## Level 1 - Exercise 3: Capitals Quiz
+
+**Objective**
+
+* Develop a Java program that reads a text file countries.txt, where each line contains the name of a country and its capital separated by a comma. The program will store this data in a HashMap<String, String> and conduct a quiz for the user.
+
+**Functionality**
+
+* Read the countries.txt file and store the countries and capitals in a HashMap<String, String>.
+    Ask for the user's name.
+* Display 10 countries randomly and ask the user to write their capital.
+    If the user guesses correctly, add 1 point.
+* At the end of the game, save the user's name and their score in the classificacio.txt file.
+
+**Requirements**
+
+* Use a HashMap<String, String> to store the data.
+* Read and write files with FileReader and FileWriter or equivalents.
+* Use a repetitive structure to manage the 10 questions.
+* Use a Random to select the countries randomly.
+
+---
+
+#  Technologies Used
+
+* **Java**
+* **Collections in Java (ArrayList, HashSet, ListIterator)**
+* **Iterators in Java**
+
+---
+
+#  Requirements
+
+To run this project, you need:
+
+* **JDK 8 or higher**
+* A development environment like **IntelliJ IDEA, Eclipse, or VS Code** with Java extension
+* Basic knowledge of **Java** and **collections**
+
+### To compile and run the program from the terminal:
+
 ```sh
 javac Month.java Main.java
 java Main
 ```
-
